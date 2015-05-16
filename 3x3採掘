@@ -1,0 +1,111 @@
+print "?masu"
+x = read()
+
+torch = 0
+count = 0
+
+function up(...)
+	turtle.dig()
+	turtle.forward()
+	turtle.turnLeft()
+	turtle.dig()
+	turtle.turnRight()
+	turtle.turnRight()
+	turtle.dig()
+	turtle.digUp()
+	turtle.up()
+	turtle.dig()
+	turtle.turnLeft()
+	turtle.turnLeft()
+	turtle.dig()
+	turtle.digUp()
+	turtle.up()
+	turtle.dig()
+	turtle.turnRight()
+	turtle.turnRight()
+	turtle.dig()
+	turtle.turnLeft()
+end
+
+function down(...)
+	turtle.dig()
+	turtle.forward()
+	turtle.turnLeft()
+	turtle.dig()
+	turtle.turnRight()
+	turtle.turnRight()
+	turtle.dig()
+	turtle.digDown()
+	turtle.down()
+	turtle.dig()
+	turtle.turnLeft()
+	turtle.turnLeft()
+	turtle.dig()
+	turtle.digDown()
+	turtle.down()
+	turtle.dig()
+	turtle.turnRight()
+	turtle.turnRight()
+	turtle.dig()
+	turtle.turnLeft()
+end
+
+function placeTorch(...)
+	turtle.select(16)
+	turtle.turnLeft()
+	turtle.turnLeft()
+	turtle.place()
+	turtle.turnRight()
+	turtle.turnRight()
+end
+
+function getHome(...)
+	turtle.up()
+	turtle.turnLeft()
+	turtle.forward()
+	turtle.turnLeft()
+	for i = 1, torch do	
+		turtle.dig()
+		turtle.forward()
+	end
+end
+
+function kataduke(...)
+	turtle.up()
+	turtle.turnLeft()
+	turtle.turnLeft()
+	for i = 1, count do
+		turle.dig()
+		turtle.forward()
+	end
+
+	turtle.select(1)
+	turtle.placeDown()
+
+	for turtle.select(2), turtle.select(15) do
+		turtle.dropDown(64)
+	end
+
+	count = count - 1
+end
+
+for 1, x do()
+	up()
+	down()
+	cuont = count + 2
+	torch = torch + 2
+	fuel = turtle.getFuelLevel()
+		if 0 == torch % 6 then
+			placeTorch()
+		end
+
+		if 0 < turtle.getItemCount(15)
+			kataduke()
+			break
+		end
+
+		if tonumber(fuel) < tonumber(x*2)
+			getHome()
+			break
+		end
+end

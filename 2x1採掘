@@ -1,0 +1,40 @@
+print "?masu"
+x = read()
+
+torch = 0
+fuel = turtle.getFuelLevel()
+
+function digforward(...)
+	turtle.dig()
+	turtle.forward()
+	turtle.digDown()
+end
+
+function placeTorch(...)
+	turtle.select(16)
+	turtle.Downplace()
+end
+
+function getHome(...)
+	for i = 1, x do
+		turtle.back
+	end
+end
+
+for 1, x do()
+	digforward()
+	torch = torch + 1
+		if 0 == torch % 6 then
+			placeTorch()
+		end
+
+		if 0 < getItemCount(15)
+			gethome()
+			break
+		end
+
+		if fuel < x*2
+			gethome()
+			break
+		end
+end
